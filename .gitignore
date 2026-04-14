@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs (your scraper already skips these)
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Environment variables (never commit secrets!)
+.env
+.env.local
+.env.*.local
+
+# Keep .env.example for others to copy
+!.env.example
+
+# Logs and runtime
+logs
+*.log
+
+# Editor / IDE files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+
+# Temporary / cache
+.tmp/
+temp/
+
+# Your project's own exclusions from the scraper
+__pycache__/
+.venv/
+venv/
+env/
+*.pyc
+*.pyo
+*.pyd
+*.py
+*.txt
