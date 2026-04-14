@@ -52,5 +52,5 @@ env/
 
 # Your scraper output
 project_code_dump.txt
-package-lock.json
+
 *.py   # optional - you can keep or remove this
