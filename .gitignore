@@ -14,7 +14,7 @@ coverage/
 public/
 # Development source files (safe to ignore)
 src/
-index.html
+
 
 # Environment variables
 .env
