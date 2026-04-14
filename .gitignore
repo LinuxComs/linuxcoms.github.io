@@ -5,24 +5,30 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Build outputs (your scraper already skips these)
-
+# Build outputs - DO NOT ignore dist!
+# We need dist/ to be committed for GitHub Pages
 build/
 .next/
 out/
 coverage/
 
-# Environment variables (never commit secrets!)
+# Development source files (safe to ignore)
+src/
+index.html
+
+# Environment variables
 .env
 .env.local
 .env.*.local
 
-# Keep .env.example for others to copy
+# Keep .env.example so others know the format
 !.env.example
 
-# Logs and runtime
-logs
+# Logs and temporary files
+logs/
 *.log
+.tmp/
+temp/
 
 # Editor / IDE files
 .vscode/*
@@ -34,18 +40,16 @@ logs
 
 # OS generated files
 Thumbs.db
+*.pyc
+*.pyo
+*.pyd
 
-# Temporary / cache
-.tmp/
-temp/
-
-# Your project's own exclusions from the scraper
+# Python / virtual environments
 __pycache__/
 .venv/
 venv/
 env/
-*.pyc
-*.pyo
-*.pyd
-*.py
-*.txt
+
+# Your scraper output
+project_code_dump.txt
+*.py   # optional - you can keep or remove this
