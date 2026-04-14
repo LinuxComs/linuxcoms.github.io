@@ -1,27 +1,20 @@
 # Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+.pnp
+.pnp.js
 
-# Build outputs - DO NOT ignore dist!
-# We need dist/ to be committed for GitHub Pages
+# Build outputs
+dist/
+dist-ssr/
 build/
 .next/
 out/
 coverage/
-public/
-# Development source files (safe to ignore)
-src/
-
 
 # Environment variables
 .env
 .env.local
 .env.*.local
-
-# Keep .env.example so others know the format
 !.env.example
 
 # Logs and temporary files
@@ -29,6 +22,10 @@ logs/
 *.log
 .tmp/
 temp/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Editor / IDE files
 .vscode/*
@@ -40,17 +37,16 @@ temp/
 
 # OS generated files
 Thumbs.db
-*.pyc
-*.pyo
-*.pyd
 
-# Python / virtual environments
+# Python / virtual environments (from your scraper)
 __pycache__/
 .venv/
 venv/
 env/
+*.pyc
+*.pyo
+*.pyd
 
-# Your scraper output
+# Your scraper output & script
 project_code_dump.txt
-
-*.py   # optional - you can keep or remove this
+scrape.py
