@@ -1,13 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import {
-  Copy,
-  Check,
-  Star,
-  Terminal,
-  Download,
-  Zap,
-  GitBranch,
-} from "lucide-react";
+import { Copy, Check, Star, Download, Zap, GitBranch } from "lucide-react";
 import data from "./data.json"; // ← Data loaded from src/data.json
 
 // ─────────────────────────────────────────────────────────────
@@ -154,23 +146,48 @@ export default function App() {
         <div className="flex justify-between items-start gap-8 mb-10">
           <div className="space-y-4 text-[15px] leading-relaxed text-gray-400 max-w-3xl">
             <p>
-              LinuxComs is an interactive cheat sheet, containing a curated list
-              of offensive security tools and their respective commands, to be
-              used against Linux environments.
+              <strong>LinuxComs</strong> is an interactive cheatsheet designed
+              for offensive security professionals, especially those preparing
+              for the OSCP exam. It provides a curated list of tools and
+              commands for automated enumeration and privilege escalation
+              against Linux machines in platforms like{" "}
+              <a
+                href="https://www.hackthebox.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-500 hover:underline"
+              >
+                Hack The Box
+              </a>
+              ,{" "}
+              <a
+                href="https://www.offensive-security.com/labs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-500 hover:underline"
+              >
+                Proving Grounds
+              </a>
+              , and{" "}
+              <a
+                href="https://www.vulnhub.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-500 hover:underline"
+              >
+                VulnHub
+              </a>
+              .
             </p>
             <p>
-              If you hate constantly looking up the right command to use to
-              escalate privileges (like me), this project should help ease the
-              pain a bit. Just select what information you currently have
-              related to the Linux machine (SUID binaries, sudo permissions,
-              cron jobs, etc.), and it will display a list of tools you can try
-              against the machine, along with a template command for easy
-              copy/pasting. See the full list of{" "}
-              <span className="text-yellow-500">items</span> and{" "}
-              <span className="text-yellow-500">filters</span>.
+              If you’re tired of constantly searching for the right command to
+              escalate privileges or enumerate a Linux box, this project is for
+              you. Simply select the information you have (SUID binaries, sudo
+              permissions, cron jobs, etc.), and LinuxComs will display relevant
+              tools and template commands for easy copy/pasting.
             </p>
-            <p className="text-sm text-gray-500 pt-2">
-              This project was inspired by{" "}
+            <p>
+              Inspired by{" "}
               <a
                 href="https://wadcoms.github.io/"
                 target="_blank"
@@ -179,12 +196,42 @@ export default function App() {
               >
                 WADComs
               </a>
-              .
+              , and drawing further inspiration from{" "}
+              <a
+                href="https://gtfobins.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-500 hover:underline"
+              >
+                GTFOBins
+              </a>
+              , LinuxComs was created to fill the gap for Linux-focused
+              cheatsheets. This project is a work in progress, so please excuse
+              any quality issues.
+            </p>
+            <p className="text-sm text-gray-500 pt-2">
+              Created by{" "}
+              <a
+                href="https://github.com/skiraware"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-500 hover:underline"
+              >
+                Simon Fung
+              </a>
+              . LinuxComs is intended to be a collaborative project—feel free to
+              contribute your own commands and share this resource with friends
+              if you find it useful!
             </p>
           </div>
 
-          <div className="hidden md:flex items-center justify-center w-32 h-32 bg-yellow-500/20 text-yellow-500 rounded-full flex-shrink-0 shadow-lg">
-            <Terminal size={64} strokeWidth={1.5} />
+          {/* NEW CODE: Standalone SVG */}
+          <div className="hidden md:block flex-shrink-0">
+            <img
+              src="/icon.svg"
+              alt="LinuxComs Logo"
+              className="w-32 h-32 drop-shadow-xl"
+            />
           </div>
         </div>
 
